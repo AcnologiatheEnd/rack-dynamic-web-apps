@@ -7,10 +7,10 @@ class Application
     num_2 = Kernel.rand(1..2)
     num_3 = Kernel.rand(1..2)
     
-    if num_1 == num_2 && num_2 == num_3
-      resp.write "You Win"
+    if Time.new.hour < 12
+      resp.write "Good Morning!"
     else
-      resp.write "You Lose"
+      resp.write "Good Afternoon!"
     end
     resp.finish
   end
